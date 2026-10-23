@@ -1,11 +1,11 @@
-<!doctype html>
+<!doctype html>   getComputedStyle(document.documentElement).getPropertyValue('--bg')
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contributor Wall · GitHub Community GITAM</title>
   <style>
-    :root {
+     :root {
       --bg: #f6f8fa;
       --surface: #ffffff;
       --ink: #1f2328;
@@ -19,6 +19,40 @@
       --y4: #216e39;
       --accent: #1a7f37;
     }
+
+
+    @media (prefers-color-scheme: dark) {
+      .tile.y1,
+      .tile.y2 {
+        color: #ffffff;
+      }
+
+      .tile.y3,
+      .tile.y4 {
+        color: #0d1117;
+      }
+
+      .button {
+        color: #0d1117;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --surface: #161b22;
+        --ink: #e6edf3;
+        --muted: #adbac7;
+        --line: #444c56;
+        --empty: #21262d;
+        --y1: #0e4429;
+        --y2: #006d32;
+        --y3: #26a641;
+        --y4: #39d353;
+        --accent: #39d353;
+      }
+    }
+
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -108,6 +142,17 @@
     }
     @media (prefers-reduced-motion: reduce) {
       .tile, .tile.new, .tile.join { transition: none; animation: none; }
+    }
+    @media (prefers-color-scheme: dark) {
+      .tile.y1,
+      .tile.y2 {
+        color: #ffffff;
+      }
+
+      .tile.y3,
+      .tile.y4 {
+        color: #0d1117;
+      }
     }
   </style>
 </head>
